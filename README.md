@@ -1,48 +1,115 @@
-# EcoAlerta — versão demonstrativa
+# 🌱 EcoAlerta
 
-Aplicação acadêmica desktop feita em Python + Tkinter. Nesta versão, os dados são persistidos localmente em arquivos JSON e as imagens ficam na pasta `ecoalerta_dados/evidencias`.
+### Sistema de gerenciamento de ocorrências ambientais
 
-## Requisitos
+O **EcoAlerta** é um sistema desenvolvido como projeto acadêmico da disciplina de Projeto de Desenvolvimento de Sistemas II, do curso de Sistemas de Informação da Universidade Paulista (UNIP).
 
-- Python 3.10 ou superior
-- Visual Studio Code (opcional, recomendado para editar o código)
-- Bibliotecas:
+Registros de desmatamento, queimadas e descarte irregular podem ficar espalhados em mensagens, planilhas e pastas. O EcoAlerta reúne essas ocorrências e suas evidências em uma aplicação desktop, facilitando o acompanhamento e o controle de acesso.
 
-```bash
-python -m pip install Pillow cryptography
+## 🎯 Objetivo do projeto
+
+Desenvolver uma aplicação desktop que permita cadastrar, consultar e gerenciar ocorrências ambientais de maneira organizada, oferecendo recursos para diferentes níveis de acesso e controle das informações.
+
+## ⚙️ Funcionalidades
+
+- **Login:** autenticação de usuários no sistema.
+- **Recuperação de senha:** redefinição de senha com código temporário exibido na tela para demonstração.
+- **Gerenciamento de usuários:** cadastro de usuários com perfis de Técnico e Coordenador.
+- **Cadastro de ocorrências:** registro de ocorrências ambientais, como desmatamento, queimadas e descarte irregular de lixo.
+- **Consulta e gerenciamento:** pesquisa, filtragem, edição e exclusão de ocorrências conforme as permissões de acesso.
+- **Evidências:** inclusão e visualização de arquivos de imagem relacionados às ocorrências.
+- **Integridade das evidências:** recursos de verificação da integridade dos arquivos.
+- **Histórico de atividades:** registro das ações realizadas no sistema.
+- **Importação e exportação:** recursos para transferência de dados entre instalações do sistema.
+
+## 💻 Tecnologias utilizadas
+
+- Python 3.10 ou superior.
+- Tkinter – construção da interface gráfica.
+- Pillow – processamento de imagens.
+- Cryptography – criptografia Fernet para evidências.
+- SQLite em memória e JSON para salvar os registros localmente.
+
+## 📂 Estrutura do projeto
+
+```text
+EcoAlerta/
+│
+├── ecoalerta.py
+├── requirements.txt
+└── README.md
 ```
 
-O Tkinter normalmente já acompanha a instalação oficial do Python para Windows.
+## 🚀 Instalação e execução
 
-## Executar
+### 1. Pré-requisitos
 
-1. Baixe `ecoalerta.py`.
-2. Abra a pasta do arquivo no VS Code.
-3. Abra **Terminal > Novo Terminal**.
-4. Execute `python -m pip install Pillow cryptography`.
-5. Execute `python ecoalerta.py`.
+- Python 3.10 ou superior, com Tkinter.
+- Git (opcional, para clonar o repositório).
 
-Na primeira execução, o programa cria a pasta `ecoalerta_dados`, o arquivo `ecoalerta_dados.json` e imagens demonstrativas.
+### 2. Clonar o repositório
+
+```bash
+git clone https://github.com/alineribeirocirino2018-droid/EcoAlerta.git
+```
+
+### 3. Acessar a pasta do projeto
+
+```bash
+cd EcoAlerta
+```
+
+### 4. Instalar as dependências
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 5. Executar o sistema
+
+```bash
+python ecoalerta.py
+```
+
+## 🖥️ Telas do sistema
+
+As capturas abaixo mostram a interface do EcoAlerta na versão demonstrativa.
+
+<img width="1317" height="892" alt="Tela do EcoAlerta" src="https://github.com/user-attachments/assets/8c185df8-ef6d-4c01-aae2-e3f1862a0bdf" />
+<img width="1316" height="887" alt="Tela do EcoAlerta" src="https://github.com/user-attachments/assets/9f4d3725-a659-4fcb-ad93-eb9590cd41d0" />
+
 
 ## Contas demonstrativas
 
-- Coordenador: `coordenador@ecoalerta.local` — senha `EcoAlerta@123`
-- Técnico: `tecnico@ecoalerta.local` — senha `Tecnico@123`
+| Perfil | E-mail | Senha de demonstração |
+| --- | --- | --- |
+| Coordenador | `coordenador@ecoalerta.local` | `EcoAlerta@123` |
+| Técnico | `tecnico@ecoalerta.local` | `Tecnico@123` |
 
-Troque as senhas se o programa for utilizado fora de uma demonstração acadêmica.
+## Dados locais
 
-## Como os dados funcionam
+Na primeira execução, o programa gera os dados de exemplo na pasta `ecoalerta_dados`. Cada computador guarda seus próprios registros. O coordenador pode transferir os exemplos pelo botão **Importar / Exportar**. Compartilhe o ZIP em privado, pois ele pode incluir evidências e a chave de criptografia.
 
-- Cada computador mantém seus próprios dados em `ecoalerta_dados/ecoalerta_dados.json`.
-- O GitHub compartilha o código-fonte, mas não sincroniza cadastros em tempo real.
-- Para levar os dados alterados de um computador para outro, entre como coordenador, abra **Importar / Exportar**, gere um pacote ZIP e importe esse ZIP no outro computador.
-- A opção **Restaurar dados demonstrativos** apaga as alterações locais e retorna aos registros iniciais. Use somente se quiser descartar os dados feitos durante os testes.
-- Mantenha a pasta `ecoalerta_dados` junto do arquivo Python. Ela contém os registros, as imagens e, quando aplicável, a chave necessária para abrir evidências criptografadas.
+## 👥 Integrantes do grupo
 
-## GitHub e privacidade
+Projeto desenvolvido coletivamente pelos alunos:
 
-Para que todos comecem com os exemplos, cada integrante pode baixar o mesmo código e deixar o programa criar os dados demonstrativos na primeira execução. Mantenha dados pessoais, imagens reais de moradores e credenciais de uso real fora do repositório público. Para compartilhar os dados de demonstração, envie o ZIP de exportação em privado aos integrantes do grupo. O pacote pode conter as evidências e a chave de criptografia.
+- Alexandry Ravara Vanin
+- Aline Ribeiro Cirino
+- Gustavo Santana Cardoso
+- Ivan Mendes
+- Larissa Barbosa da Silva
 
-## Observação acadêmica
+## 🎓 Instituição de ensino
 
-Este é um protótipo local para fins de estudo e apresentação. Não oferece sincronização simultânea entre computadores nem deve ser usado como sistema de produção.
+**Universidade Paulista – UNIP**
+
+**Curso:** Sistemas de Informação
+
+**Disciplina:** Projeto de Desenvolvimento de Sistemas II
+
+**Professor:** Marcus Leite
+
+---
+
+*Projeto acadêmico desenvolvido com o objetivo de aplicar conhecimentos de programação Python e desenvolvimento de interfaces gráficas com Tkinter.*
