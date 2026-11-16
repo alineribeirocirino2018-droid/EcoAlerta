@@ -35,13 +35,13 @@ Troque as senhas se o programa for utilizado fora de uma demonstração acadêmi
 
 - Cada computador mantém seus próprios dados em `ecoalerta_dados/ecoalerta_dados.json`.
 - O GitHub compartilha o código-fonte, mas não sincroniza cadastros em tempo real.
-- Para levar os dados alterados de um computador para outro, entre como coordenador, abra **Importação e exportação**, gere um pacote ZIP e importe esse ZIP no outro computador.
+- Para levar os dados alterados de um computador para outro, entre como coordenador, abra **Importar / Exportar**, gere um pacote ZIP e importe esse ZIP no outro computador.
 - A opção **Restaurar dados demonstrativos** apaga as alterações locais e retorna aos registros iniciais. Use somente se quiser descartar os dados feitos durante os testes.
 - Mantenha a pasta `ecoalerta_dados` junto do arquivo Python. Ela contém os registros, as imagens e, quando aplicável, a chave necessária para abrir evidências criptografadas.
 
 ## GitHub e privacidade
 
-Para que todos comecem com os exemplos, cada integrante pode baixar o mesmo código e deixar o programa criar os dados demonstrativos na primeira execução. Não enviem para um repositório público dados pessoais, imagens reais de moradores, senhas ou informações sensíveis. Para compartilhar alterações de demonstração, prefiram o pacote ZIP de exportação.
+Para que todos comecem com os exemplos, cada integrante pode baixar o mesmo código e deixar o programa criar os dados demonstrativos na primeira execução. Mantenha dados pessoais, imagens reais de moradores e credenciais de uso real fora do repositório público. Para compartilhar os dados de demonstração, envie o ZIP de exportação em privado aos integrantes do grupo. O pacote pode conter as evidências e a chave de criptografia.
 
 ## Observação acadêmica
 
